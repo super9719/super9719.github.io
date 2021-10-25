@@ -1,0 +1,303 @@
+/* main rules*/
+body{margin: 0;
+perspective: 400px;}
+.container{width: 1170px; margin: auto;}
+.clearfix{clear: both;}
+/*main rules*/
+
+/* start header */
+.header .slider{
+	background-image: url('Desertsld.jpg');
+	background-size: cover;
+	height: 600px;
+}
+.header .slider .intro{
+	padding-top: 150px;
+	color: #fff;
+}
+.header .slider .intro h2{
+	margin: 0 auto;
+	font-size: 50px;
+	width: 600px;
+	border-top: 4px solid #fff ;
+	border-bottom: 4px solid #fff;
+	margin-bottom: 20px;
+	padding: 5px 0;
+	color: #fff;
+}
+.header .slider .intro button{
+	color: #fff;
+	background:none;
+	font-size: 20px;
+	border:2px solid #fff;
+	font-weight: bold;
+	padding: 10px 35px;
+}
+.header .navbar{
+	background-color:#252f31;
+	color: #fff;
+	overflow: hidden;
+	text-transform: uppercase;
+	}
+.header .navbar h2 span{color:#2ecc71;}	
+.header .navbar h2{color: #fff;}
+.header .navbar ul{
+	list-style: none;
+	padding-left: 0px;
+	overflow: hidden;
+	float: right;
+}
+.header .navbar ul li{
+	float: left;
+	padding-left: 20px;
+}
+.header .navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.header .navbar ul li a:hover {color: #2ecc71;}
+.header .navbar ul li a:active {color: #2ecc71;}
+
+/* end header */
+/* start features*/
+.features{overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.features .feat{width: 33.33333%;}
+.features .feat p{
+	text-align: justify;
+	padding-right:20px;
+}
+/* end features*/
+
+/* strat about-me*/	
+.about-me{overflow: hidden;
+background-color:#f1f1f1;}
+.about-me .image{
+	width:40%; 
+	height: 500px;
+}	
+.about-me .info{width:60%;}
+.about-me .info h2{margin: 40px 0 20px 40px;}
+.about-me .info >p {margin: 0 0 10px 40px;}
+.about-me .image img{width: 100%; height: 100%;}
+.about-me .info .hobbies{
+	overflow: hidden;
+	margin:5px 0 0 40px;
+}
+.about-me .info .hobbies .content{
+	overflow: hidden;
+	width: 50%;
+	padding-bottom: 10px;
+}
+.about-me .info .hobbies .content .icon{
+	width: 20%;
+	margin: 20px 0 0 0;
+}
+.about-me .info .hobbies .content .hbtext{width: 80%;}
+.about-me .info .hobbies .content .icon img{
+	width: 80%;
+	height: 40px;
+}
+/* end about-me*/
+
+/*start skills*/
+.skills{
+	overflow: hidden;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.skills .myskills{width: 40%;}
+.skills .myskills p{margin: 0 20px 0 0;}
+.skills .myprogr{
+	width: 50%;
+	margin-left:40px; 
+}
+.skills .myprogr .tech div {
+	background-color: #f2f2f2;
+	height: 25px;
+}
+.skills .myprogr .tech div span{
+	background-color: #2dcc70;
+	height: 25px;
+	display: block;
+	text-align: right;
+	line-height: 25px;
+}
+
+/* end skills*/
+
+/* start resume*/
+.resume{
+	background-color: #f2f2f2;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.resume h2{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.resume p{padding: 0 100px;}
+/* end resume*/
+/* start education*/
+.education{
+	overflow: hidden;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.education .myeduc{width: 45%;}
+.education .myeduc h2{margin: 25px 0 20px 40px}
+.education .myeduc p{margin: 0 0px 10px 40px}
+.education .myprogrt{
+	width: 50%;
+	margin-left: 5%;
+	padding-top: 50px;
+}
+.education .myprogrt h3{margin-bottom: 5px;}
+.education .myprogrt span{
+	display: block;
+	margin-bottom: 5px;
+}
+.education .myprogrt span:first-of-type{color: #555;}
+.education .myprogrt span:last-of-type{
+	color:#eee;
+	background-color: #2dcc70;
+	display: inline-block;
+	padding: 4px 10px;
+}
+.education .myprogrt hr{margin: 20px 0;}
+.education .myprogrt p:last-of-type{margin-bottom: 50px;}
+
+/* end education*/
+/* start testmonia*/
+.testmonial{
+	background-color: #f2f2f2;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+.testmonial q{
+	line-height: 1.6;
+	color: #444;
+	font-weight: bold;
+	font-size: 16px;
+}
+.testmonial ul{
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	padding-top: 40px;
+	cursor: pointer;
+}
+.testmonial ul li{
+	width: 15px;
+	height: 15px;
+	border:2px solid #2dcc70;
+	border-radius: 10px;
+	display: inline-block;
+}
+.testmonial ul li:hover{background-color:#2dcc70;}
+.testmonial ul li.active{background-color: #2dcc70;}
+/* end testmonial*/
+
+/* strat portphoto*/
+img{
+	width: 92%;
+	height: 333px;
+	border:2px solid #eee;
+}
+img:hover{
+	transform: scale3d(.9,.5,.3) rotateX(25deg);
+	transition: all .5s ease-in-out ;
+}
+.portphoto{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.portphoto p{padding-bottom: 15px;}
+.portphoto .ourwork{overflow: hidden;}
+.portphoto .ourwork > div{
+	float: left;
+	width: 33.33333%;
+	margin-bottom: 15px;
+}
+/* end portphoto */
+
+/* start contact */
+.contact{
+	overflow: hidden;
+	background-color: #252f30;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	color: darkgrey;
+	padding-left: 40px;
+}
+.contact .mycntct{  
+	margin-right:5%;
+    width: 45%;
+}
+.contact .mycntct p{color:darkgrey;}
+.contact .mycntct strong{color: #d1d6da;}
+.contact h3{color: #d1d6da;}
+.contact .tool{width: 50%;}
+.contact .tool label{
+	display: block;
+	color: #d1d6da;
+	margin: 20px 0 10px 0;
+}
+.contact .tool input[type="text"]{
+	background-color:grey;
+	border:none;
+	width:50%;
+	padding: 5px;
+	color: #eee;
+}
+.contact .tool textarea{
+	background-color:grey;
+	border:none;
+	width:50%;
+	padding: 5px;
+	color: #eee;
+	height: 250px;
+}
+.contact .tool input[type="submit"]{
+	background-color: #191e22;
+	color: #eee;
+	padding: 10px 20px;
+	border:none;
+}
+/* end contact */
+
+/* start footer*/
+
+.footer{
+	padding-top: 30px;
+	padding-bottom: 5px;
+	background-color: #101010;
+	color: #6a6e71;
+}
+.footer ul{
+	padding: 0;
+	list-style: none;
+}
+.footer ul li{display: inline-block;}
+.footer ul li img{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+/* end footer */
+
+/* start framework*/
+.my-btn{
+	color: #2dcc70;
+	background:none;
+	border:2px solid #2dcc70;
+	padding: 10px 30px;
+	font-weight: bold;
+}
+.fl-left{float: left;}
+p{line-height: 1.6;color:#555;}
+h2, h3, h4{color: #333;}
+.txt-center{text-align: center;}
+/*end framework*/

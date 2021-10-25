@@ -1,0 +1,587 @@
+.overall .rightsection .checkout{
+    display: none;
+    width: 100%;
+    height: calc(100% - 48px);
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+.overall .rightsection .checkout.active{
+    display: block;
+}
+.overall .rightsection .checkout >div{
+    height: calc(100% - 20px);  
+    float: left;  
+}
+
+/******************************************* left **************************************************/
+.overall .rightsection .checkout >.left{
+    width: 55%;
+    min-width: 55%;
+    padding: 0 40px;
+}
+.overall .rightsection .checkout >.left h3{
+    height: 30px;
+    margin: 10px 0 15px;
+    width: 100%;
+}
+
+.overall .rightsection .checkout .left .search{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: height .3s linear;
+    margin-bottom: 25px;
+}
+.overall .rightsection .checkout .left .search.active{
+    height: 100px;
+}
+.overall .rightsection .checkout .left .search::after{
+    display: block;
+    content: '';
+    background-color: var(--colordark);
+    width: 100%;
+    height: 2px;
+    margin-top: -10px;
+}
+.overall .rightsection .checkout .left .search i{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--colordark);
+}
+.overall .rightsection .checkout .left .search i::after{
+    display: block;
+    content: '';
+    background-color: var(--colordark);
+    width: 90%;
+    height: 2px;
+    transform: rotate(90deg);
+    margin-top: -8px;
+    margin-left: 22px;
+}
+
+.overall .rightsection .checkout .left .search input{
+    width: calc(95% - 40px);
+    height: 40px;
+    border: none;
+    padding:0 10px;
+    font-size: 15px;
+}
+.overall .rightsection .checkout .left .search input:focus{
+    outline: none;
+}
+.overall .rightsection .checkout .left .search >span{
+    width: calc(100% - 95% - 40px);
+    background: transparent;
+    color: var(--colordark);
+    cursor: pointer;
+}
+.overall .rightsection .checkout .left .search >span:hover{
+    font-size: 1.1em;
+}
+.overall .rightsection .checkout .left .search .settings{
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    background-color: var(--colordark);
+    color: #fff;
+    top: calc(100% - 24px);
+    left: calc(100% - 90px);
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .left .search .searchbyname,
+.overall .rightsection .checkout .left .search .searchbysp{
+    position: absolute;
+    width: 50%;
+    height: 30x;
+    opacity: 0;
+    z-index: -10;
+    padding-left: 10px;
+    transition: opacity .4s linear;
+    
+}
+.overall .rightsection .checkout .left .search .searchbyname.active,
+.overall .rightsection .checkout .left .search .searchbysp.active{
+    opacity: 1;
+    z-index: 0;
+}
+.overall .rightsection .checkout .left .search .searchbysp{
+    left: 50%;
+}
+
+.overall .rightsection .checkout .left .search .searchbyname .track,
+.overall .rightsection .checkout .left .search .searchbysp .track{
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .left .search .searchbyname .track.active .thumb,
+.overall .rightsection .checkout .left .search .searchbysp .track.active .thumb{
+    margin-left: 15px;
+    background-color: var(--colordark);
+}
+.overall .rightsection .checkout .left .search .searchbyname .track .thumb,
+.overall .rightsection .checkout .left .search .searchbysp .track .thumb{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    /*transition: all .2s linear;*/
+}
+.overall .rightsection .checkout .left .search .searchbyname span:last-of-type,
+.overall .rightsection .checkout .left .search .searchbysp span:last-of-type{
+    display: inline-block;
+    height: 18px;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: text-bottom;
+}
+
+.overall .rightsection .checkout .left .tableheader{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    background-color: rgb(249 250 254);
+    border-radius: 5px;
+    color: #999;
+    line-height: 30px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-right: 10px;
+}
+
+.overall .rightsection .checkout .left .tableheader >div{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.overall .rightsection .checkout .left .tableheader >div.hidden{
+    display: none;
+}
+.overall .rightsection .checkout .left .tableheader .qnt{
+    padding-left: 0;
+    text-align: center;
+}
+.overall .rightsection .checkout .left .tableheader .otherinfo{
+    position: absolute;
+    width: 14px;
+    border-radius: 5px;
+    top: 0;
+    left: calc(100% - 15px);
+    padding: 9px 0;
+    cursor: pointer;
+    color: var(--colordark);
+}
+.overall .rightsection .checkout .left .table{
+    width: 100%;
+    height: calc(100% - 190px);
+    overflow: auto;
+}
+.overall .rightsection .checkout .left .table::-webkit-scrollbar{
+    width: 8px;
+}
+.overall .rightsection .checkout .left .table::-webkit-scrollbar-track{
+    background-color: rgba(248, 66, 97, .2);
+    border-radius: 5px;
+    padding: 2px;
+}
+.overall .rightsection .checkout .left .table::-webkit-scrollbar-thumb{
+    background-color: rgba(248, 66, 97, .6);
+    border-radius: 5px;
+    border:solid 2px rgb(240, 224, 234);
+}
+.overall .rightsection .checkout .left .table .row{
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #333;
+    display: flex;
+    line-height: 30px;
+}
+.overall .rightsection .checkout .left .table .row:hover{
+    background-color: var(--colordark);
+    color: #000;
+}
+.overall .rightsection .checkout .left .table .row >input{
+    overflow: hidden;
+    width: 100%;
+    padding-left: 15px;
+    font-size: 14px;
+    border: none;
+    background: none;
+}
+.overall .rightsection .checkout .left .table .row >input:disabled{
+    color: #000;
+}
+.overall .rightsection .checkout .left .table .row >input.hidden{
+    display: none;
+}
+.overall .rightsection .checkout .left .table .row .qnt{
+    padding-left: 0;
+    text-align: center;
+}
+/*****************************************************************************************************/
+
+/******************************************* right ***************************************************/
+.overall .rightsection .checkout >.right{
+    width: 35%;
+    margin-left: 15px;
+}
+
+.overall .rightsection .checkout .right h3{
+    height: 30px;
+    margin: 10px 0 15px;
+    width: 100%;
+}
+
+.overall .rightsection .checkout .right .shoppinglist{
+    width: 100%;
+    height: calc(100% - 270px);
+    overflow-y: scroll;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.overall .rightsection .checkout .right .shoppinglist::-webkit-scrollbar{
+    width: 8px;
+}
+.overall .rightsection .checkout .right .shoppinglist::-webkit-scrollbar-track{
+    background-color: rgba(248, 66, 97, .2);
+    border-radius: 5px;
+    padding: 2px;
+}
+.overall .rightsection .checkout .right .shoppinglist::-webkit-scrollbar-thumb{
+    background-color: rgba(248, 66, 97, .6);
+    border-radius: 5px;
+    border:solid 2px rgb(240, 224, 234);
+}
+
+.overall .rightsection .checkout .right .shoppingitem{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.overall .rightsection .checkout .right .shoppingitem >div{
+    width: 100%;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .productname::after{
+    content: 'More info';
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--colordark);
+    opacity: .8;
+    cursor: pointer;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .qnt .decrease{
+    padding-right: 10px;
+    opacity: .5;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .right .shoppingitem .qnt .decrease:hover{
+    opacity: 1;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .qnt .increase{
+    padding-left: 10px;
+    opacity: .5;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .right .shoppingitem .qnt .increase:hover{
+    opacity: 1;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .sellingprice{
+    position: relative;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .sellingprice .disTrack{
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .sellingprice .disTrack .thumb{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .delete{
+    width: 50%;
+}
+
+.overall .rightsection .checkout .right .shoppingitem .delete i{
+    color: var(--colordark);
+    font-size: 0.9em;
+    opacity: .8;
+    padding-top: 3px;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .right .shoppingitem .delete i:hover{
+    font-size: 1em;
+    opacity: 1;
+    padding-top: 1px;
+}
+
+.overall .rightsection .checkout .right .line{
+    width: 98%;
+    height: 2px;
+    background-color: #999;
+    margin-bottom: 15px;
+}
+.overall .rightsection .checkout .right .ordertotal{
+    width: 98%;
+    height: 50px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.overall .rightsection .checkout .right .ordertotal div:first-of-type{
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+.overall .rightsection .checkout .right .ordertotal div:last-of-type{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--colordark);
+}
+
+.overall .rightsection .checkout .right .paymenttotal{
+    width: 100%;
+    margin: 0 auto 15px;
+    height: 60px;
+    background-color: #000;
+    box-shadow: 2px 2px 4px var(--colordark);
+    text-align: center;
+    line-height: 60px;
+}
+
+.overall .rightsection .checkout .right .paymenttotal span{
+    color: var(--colordark);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.overall .rightsection .checkout .right .paybutton{
+    width: 120px;
+    height: 35px;
+    float: right;
+    background-color: var(--colordark);
+    color: #fff; 
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.overall .rightsection .checkout .right .paybutton:hover{color: #000;}
+.overall .rightsection .checkout .right .paybutton:hover i{color: #000;}
+
+.overall .rightsection .checkout .right .paybutton i{
+    color: white;
+}
+
+.overall .rightsection .checkout .right .paymentinfo{
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 120px;
+    top: calc(50% - 175px);
+    left: calc(50% - 182.5px);
+    background-color: rgb(254,254,254);
+    transition: height .4s linear;
+}
+.overall .rightsection .checkout .right .paymentinfo.active{
+    height: 365px;
+}
+.overall .rightsection .checkout .right .paymentinfo .left{
+    float: left;
+    width: 75%;
+    height: 100%;
+    padding-left: 10px;
+    box-shadow: -1px 3px 6px, -1px 0px 6px;
+}
+.overall .rightsection .checkout .right .paymentinfo .left >div{
+    position: relative;
+    height: 0;
+    opacity: 0;
+    transition: all .4s linear;
+}
+.overall .rightsection .checkout .right .paymentinfo.active .left >div{
+    opacity: 1;
+}
+.overall .rightsection .checkout .right .paymentinfo.active .left >div:nth-of-type(1),
+.overall .rightsection .checkout .right .paymentinfo.active .left >div:nth-of-type(2){
+    height: 80px;
+    margin-bottom: 25px;
+}
+.overall .rightsection .checkout .right .paymentinfo.active .left >div:nth-of-type(3){
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.overall .rightsection .checkout .right .paymentinfo .left label{
+    position: absolute;
+    color: #555;
+    left: 5px;
+    font-size: 14px;
+    transition: all .3s linear;
+
+}
+.overall .rightsection .checkout .right .paymentinfo .left label.active{
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+}
+
+.overall .rightsection .checkout .right .paymentinfo .name label:first-of-type{top: 5px;}
+.overall .rightsection .checkout .right .paymentinfo .name label.active:first-of-type{top: -14px;}
+.overall .rightsection .checkout .right .paymentinfo .name label:last-of-type{top: 55px;}
+.overall .rightsection .checkout .right .paymentinfo .name label.active:last-of-type{top: 36px;}
+.overall .rightsection .checkout .right .paymentinfo div:nth-of-type(2) label:first-of-type{top: 5px;}
+.overall .rightsection .checkout .right .paymentinfo div:nth-of-type(2) label.active:first-of-type{top: -14px;}
+.overall .rightsection .checkout .right .paymentinfo div:nth-of-type(2) label:last-of-type{top: 55px;}
+.overall .rightsection .checkout .right .paymentinfo div:nth-of-type(2) label.active:last-of-type{top: 36px;}
+
+
+.overall .rightsection .checkout .right .paymentinfo input{
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #eee;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #555;
+}
+.overall .rightsection .checkout .right .paymentinfo input:last-of-type{
+    margin-bottom: 25px;
+}
+.overall .rightsection .checkout .right .paymentinfo input:focus{
+    outline: none;
+    box-shadow: 0 0 4px var(--colordark);
+}
+
+.overall .rightsection .checkout .right .paymentinfo .rest{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    background-color: #111;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.overall .rightsection .checkout .right .paymentinfo .rest span:first-of-type{
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+    top: -12px;
+}
+.overall .rightsection .checkout .right .paymentinfo .rest .remainingamount{
+    display: inline-block;
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--colordark);
+    font-weight: bold;
+}
+
+.overall .rightsection .checkout .right .paymentinfo .buttons{
+    text-align: right;
+    width: 230px;
+    height: fit-content !important;
+    opacity: 1 !important;
+    
+}
+.overall .rightsection .checkout .right .paymentinfo .buttons button{
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
+    background-color: var(--colordark);
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .right .paymentinfo .buttons button:last-of-type{
+    margin-left: 5px;
+}
+
+.overall .rightsection .checkout .right .paymentinfo .right{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: var(--colordark);
+    box-shadow: 1px 3px 6px, 1px 0px 6px;
+    padding-top: 0;
+    text-align: center;
+}
+.overall .rightsection .checkout .right .paymentinfo.active .right{
+    padding-top: 175px;
+}
+.overall .rightsection .checkout .right .paymentinfo .right span{
+    font-family: cursive;
+    color: #fff;
+    opacity: 0;
+}
+.overall .rightsection .checkout .right .paymentinfo.active .right span{
+    opacity: 1;
+    transition: opacity .2s linear .4s;
+}
+.overall .rightsection .checkout .right .paymentinfo .right .close{
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    opacity: 1;
+    cursor: pointer;
+}
+.overall .rightsection .checkout .right .paymentinfo .right .close i:hover{
+    font-size: 1.1em;
+}
+/********************************************************************************************************/
+
+/***************************************** checkout menu ***************************************************/
+/*.overall .rightsection .checkout .checkoutmenu{
+    position: absolute;
+    top: 48;
+    left: calc(100% - 200px);
+    width: 200px;
+    height: 100%;
+    background-color: #000;
+}*/
+
+

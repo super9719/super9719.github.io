@@ -1,0 +1,446 @@
+:root{
+    --colordarker: rgb(248,40,60);
+    --colordark: rgb(248, 66, 97);
+    --colorligth: rgb(247, 108, 131);
+    --leftsectioncolor: rgb(34,34,60);
+    --rightsectioncolor: rgb(238,243,249);
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.overall{
+    width: 100%;
+    display: flex; 
+}
+
+/********************************** leftsection **************************************************/
+.overall .leftsection{
+    width: 70px;
+    height: 100%;
+    background-color: var(--leftsectioncolor);
+    transition: all .5s linear;
+}
+.overall .leftsection.active{
+    width: 160px;
+}
+.overall .leftsection >.header{
+    width: 100%;
+    height: 80px;
+    text-align: right;
+}
+.overall .leftsection >.header .sub-header{
+    display: inline-block;
+    width: 40px;
+    height: 80px;
+    padding-top: 4px;
+    cursor: pointer;
+    position: relative;
+}
+.overall .leftsection >.header .sub-header div{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all .3s linear;
+    transform-origin: left;
+
+}
+.overall .leftsection >.header .sub-header div:nth-of-type(2){top:12px;}
+.overall .leftsection >.header .sub-header div:nth-of-type(3){top: 20px;}
+
+.overall .leftsection >.header .sub-header.active div:first-of-type{
+    transform: rotate(33deg);
+}
+.overall .leftsection >.header .sub-header.active div:last-of-type{
+    transform:rotate(-33deg);
+}
+.overall .leftsection >.header .sub-header.active div:nth-of-type(2){opacity: 0;}
+.overall .leftsection >div:not(:first-of-type){
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-left: solid 3px rgba(248, 66, 97, .1);
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.overall .leftsection >div:not(:first-of-type) div{
+    width: 56px;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: all .2s linear;
+    transition: width .6s linear;
+    overflow: hidden;
+}
+.overall .leftsection div.checkout div{padding-left: 14px;}
+.overall .leftsection div.invoice div{padding-left: 17px;}
+.overall .leftsection div.client div{padding-left: 16px;}
+.overall .leftsection div.reports div{padding-left: 15px;}
+.overall .leftsection >div:not(:first-of-type) div.active{
+    background-color: var(--colordark);
+}
+.overall .leftsection.active >div:not(:first-of-type) div{
+    width: 129px;
+}
+.overall .leftsection >div:not(:first-of-type) div.active i{color: #fff;}
+
+.overall .leftsection >div:not(:first-of-type) span{
+    width: 100;
+    color: #fff;
+    opacity: 0;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: monospace;
+    transition: opacity .2s linear;
+}
+.overall .leftsection .checkout span{padding-left: 8px;}
+.overall .leftsection .invoice span{padding-left: 12px;}
+.overall .leftsection .stock span{padding-left: 5px;}
+.overall .leftsection .reports span{padding-left: 7px;}
+.overall .leftsection .client span{padding-left: 9px;}
+.overall .leftsection .user span{padding-left: 6px;}
+.overall .leftsection.active >div:not(:first-of-type) span{
+    transition: all .2 linear .2s;
+    opacity: 1;
+}
+.overall .leftsection >div:not(:first-of-type) i{
+    color: #ddd;
+    font-size: 1.8em;
+}
+
+.overall .leftsection >div:not(:first-of-type):hover:not(div.active){border-left: solid 3px var(--colordark);}
+.overall .leftsection >div.active:not(:first-of-type){border-left: solid 3px #333;}
+.overall .leftsection >div:not(:first-of-type):hover:not(.active) span{text-shadow: 1px 1px 4px var(--colordark);}
+.overall .leftsection >div:not(:first-of-type):hover:not(.active) i{color: var(--colordark);}
+
+/************************************ rightSection **************************************************/
+.overall .rightsection{
+    width: 100%;
+    height: 100%;
+    background-color: var(--rightsectioncolor);
+    position:relative
+}
+.overall .rightsection .overlay{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: calc(100% - 48px);
+    z-index: 50;
+    top: 48px;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+}
+.overall .rightsection .overlay.active{display: block;}
+.overall .rightsection >.header{
+    width: 100%;
+    height: 8px;
+    background-color: var(--colordark);
+    -webkit-app-region : drag;
+    cursor: grab;
+}
+.overall .rightsection >.settings{
+    float: left;
+    width: 50%;
+    height: 40px;
+    padding: 5px 10px;
+    position: relative;
+    background-color: rgb(249,250,254);
+}
+.overall .rightsection >.settings >i{
+    color: var(--colordark);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.overall .rightsection >.settings .settingslist{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 250px;
+    height: 134px;
+    background-color: var(--leftsectioncolor);
+    top: 10px;
+    left: 35px;
+    border: solid 1px var(--colordark);
+}
+.overall .rightsection >.settings .settingslist.active{display: block;}
+.overall .rightsection >.settings .settingslist div{
+    width: 98%;
+    height: 40px;
+    margin: 3px auto;
+    color: white;
+    opacity: .9;
+    line-height: 40px;
+    border: outset 1px rgba(248, 66, 97, .6);
+    margin-bottom: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 75px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.overall .rightsection >.settings .settingslist div i{
+    font-size: 1.4em;
+    opacity: 0.9;
+    display: inline-block;
+}
+.overall .rightsection >.settings .settingslist div:first-of-type i{padding-right: 12px;}
+.overall .rightsection >.settings .settingslist div:last-of-type i{padding-right: 5px;}
+.overall .rightsection >.settings .settingslist div:hover{
+    border: outset 1px var(--colordark);
+    opacity: 1;
+    font-size: 16px;
+}
+.overall .rightsection .windowcontroller{
+    float: left;
+    width: 50%;
+    height: 40px;
+    text-align: right;
+    padding: 5px;
+    background-color: rgb(249,250,254);
+}
+.overall .rightsection .windowcontroller div{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.overall .rightsection .windowcontroller .hide span{
+    width: 16px;
+    height: 2px;
+    background-color: var(--leftsectioncolor);
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 7px;
+    border-radius: 20px;
+}
+.overall .rightsection .windowcontroller .hide:hover{
+    background-color: #ddd;
+}
+.overall .rightsection .windowcontroller .resize span{
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: solid 1px black;
+}
+.overall .rightsection .windowcontroller .resize span:first-of-type{
+    top: 7px;
+    left: 10px;
+}
+.overall .rightsection .windowcontroller .resize span:last-of-type{
+    top: 9px;
+    left: 7px;
+}
+.overall .rightsection .windowcontroller .resize:hover{
+    background-color: #ddd;
+}
+.overall .rightsection .windowcontroller .quit span:first-of-type{
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: solid 1px black;
+    top: 6;
+    left: 10;
+}
+.overall .rightsection .windowcontroller .quit span:last-of-type{
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    left: 17px;
+    top: 5px;
+}
+.overall .rightsection .windowcontroller .quit:hover span{
+    border-color: #e62525;
+}
+.overall .rightsection .windowcontroller .quit:hover span:last-of-type{background-color: #e62525;}
+.overall .rightsection .icon{
+    display: none;
+}
+.overall .rightsection .icon.active{
+    display: block;
+    width: 100%;
+    height: calc(100% - 48px);
+    text-align: center;
+    padding-top: 13%;
+}
+.overall .rightsection .icon i{
+    font-size: 18em;
+    color: #bbb;
+}
+.overall .rightsection .loginwin{
+    position: absolute;
+    z-index: 60;
+    left: calc(50% - 180px);
+    top: 160px;
+    width: 360px;
+    height: 345px;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.overall .rightsection .loginwin.active{display: block;}
+.overall .rightsection .loginwin .quit{
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    padding: 5px 8px;
+    color: var(--colordark);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.overall .rightsection .loginwin .quit i:hover{
+    font-size: 1.3em;
+}
+.overall .rightsection .loginwin h2{
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.overall .rightsection .loginwin h2{margin-bottom: 40px;}
+.overall .rightsection .loginwin .username,
+.overall .rightsection .loginwin .password{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 10px;
+}
+.overall .rightsection .loginwin .username.active,
+.overall .rightsection .loginwin .password.active{
+    box-shadow: 0 0 5px rgba(248, 66, 97, .5);
+}
+.overall .rightsection .loginwin .username i,
+.overall .rightsection .loginwin .username span,
+.overall .rightsection .loginwin .username input,
+.overall .rightsection .loginwin .password i,
+.overall .rightsection .loginwin .password span,
+.overall .rightsection .loginwin .password input{
+    position: absolute;
+}
+.overall .rightsection .loginwin .username i,
+.overall .rightsection .loginwin .password i{
+    width: 20%;
+    left: 0;
+    top: 0;
+    height: 40px;
+    padding-left: 5%;
+    font-size: 20px;
+    line-height: 35px;
+    color: var(--colordark);
+}
+.overall .rightsection .loginwin .username span,
+.overall .rightsection .loginwin .password span{
+    display: inline-block;
+    width: 2px;
+    height: 29px;
+    background-color: var(--colorligth);
+    left: 16%;
+    top: 5px;
+}
+.overall .rightsection .loginwin .username input,
+.overall .rightsection .loginwin .password input{
+    border: none;
+    background: transparent;
+    width: 80%;
+    height: 40px;
+    left: 20%;
+    top: 0;
+    font-size: 16px;
+}
+.overall .rightsection .loginwin .username input:focus,
+.overall .rightsection .loginwin .password input:focus{
+    outline: none;
+}
+.overall .rightsection .loginwin .username input::placeholder,
+.overall .rightsection .loginwin .password input::placeholder{
+    opacity: .9;
+}
+.overall .rightsection .loginwin button{
+    display: block;
+    width: 80%;
+    height: 38px;
+    margin: 15px auto;
+    margin-top: 30px;
+    background-color: var(--colordark);
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.overall .rightsection .loginwin button:focus{
+    box-shadow: 0 0 2px ;
+}
+.overall .rightsection .loginwin button:focus{outline: none;}
+.overall .rightsection .loginwin button:hover{
+    color: black;
+    font-size: 19px;
+}
+
+.overall .rightsection .loginwin  .forgotpw{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+
+}
+.overall .rightsection .loginwin .forgotpw span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.overall .rightsection .loginwin .forgotpw span:hover{
+    color: #333;
+}
+.overall .rightsection .loginwin .footer{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    margin-top: 25px;
+    background-color: var(--colordark);
+    border-radius: 10px;
+}
+.overall .rightsection .loginwin .footer .up{
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background-color: var(--colordark);
+}
+
+/************************************************** tools ***********************************************/
+
+
+
+
+
+
+
+
+
+
+
+/**************** framework *****************/
+.clear{
+    clear: both;
+}
