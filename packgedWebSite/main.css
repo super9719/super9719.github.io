@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+    perspective: 600px;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1s linear;
+
+}
+
+div{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-style: preserve-3d;
+    transition: all 2s linear;
+}
+.first{
+    background-color: #111;
+    top: 0;
+    left: 0;
+}
+.two{
+    background-color: #111;
+    top: 0;
+    left: 50%;
+}
+.three{
+    background-color: #111;
+    top: 50%;
+    left: 0;
+}
+.four{
+    background-color: #111;
+    top: 50%;
+    left: 50%;
+}
+.container.active .first{
+    width: 20%;
+    height: 20%;
+    transform: translate(151%, 151%);
+    background-color: red;
+}
+.container.active .two{
+    width: 20%;
+    height: 20%;
+    transform: translate(0, 151%);
+    background-color: green;
+}
+.container.active .three{
+    width: 20%;
+    height: 20%;
+    transform: translate(151%, 0);
+    background-color: blue;
+}
+.container.active .four{
+    width: 20%;
+    height: 20%;
+    background-color: orange;
+}
