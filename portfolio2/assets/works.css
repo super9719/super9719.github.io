@@ -1,0 +1,118 @@
+#works{
+    width: 100%;
+    height: 20%;
+    background-color: var(--home-bgColor);
+}
+#works .content{
+    width: 100%;
+    height: 100%;
+    
+}
+#works .content .title{
+    width: 100%;
+    height: 120px;
+    font-size: 3em;
+    padding-top: 50px;
+}
+#works .content .title span{
+    font-size: 14px;
+    padding-top: 5px;
+}
+#works .content .gallery{
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 80px;
+}
+#works .content .gallery >div{
+    display: inline-block;
+    width: 28%;
+    height: 330px;
+    margin-right: 5%;
+    border-radius: 20px;
+    padding: 15px 0 0 15px;
+    vertical-align: bottom;
+    box-shadow: 2px 2px 6px #000;
+}
+#works .content .gallery >div:first-of-type{
+    background-color: #ffcd63;
+    animation: products 4s linear 2s infinite alternate;
+}
+#works .content .gallery >div:nth-of-type(2){
+    background-color: #38756a;
+}
+#works .content .gallery >div:nth-of-type(3){
+    background-color: rgb(248, 66, 97);
+}
+#works .content .gallery >div:nth-of-type(4){
+    background-color: #5072bc;
+}
+#works .content .gallery >div div:first-of-type{
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#works .content .gallery >div div:first-of-type span{
+    font-size: 12px;
+    font-weight: normal;
+}
+#works .content .gallery >div div:last-of-type{
+    width: 100%;
+    height: calc(100% - 50px);
+}
+#works .content .gallery >div div:last-of-type img{
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.customalert{
+    display: none;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    padding: 20px 0 0 15px;
+}
+.customalert.active{
+    display: block;
+}
+.customalert div:first-of-type{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.customalert div:nth-of-type(2){
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.customalert div:last-of-type button{
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    width: 50px;
+    height: 30px;
+    background-image: linear-gradient(30deg, #7f3f9e, #319ed9);
+    margin-right: 5px;
+}
+
+/************************ animation ********************************/
+@keyframes products {
+    0%{
+        margin-left: 0;
+    }20%{
+        margin-left: 0;
+    }40%{
+        margin-left: 0;
+    }60%{
+        margin-left: -33%;
+    }80%{
+        margin-left: -33%;
+    }100%{
+        margin-left: -33%;
+    }
+}
+

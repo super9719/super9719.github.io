@@ -1,0 +1,470 @@
+#about{
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    background-color: #fdfdfd;
+}
+#about .content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#about .content .left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 100px;
+
+}
+#about .content .left .ref{
+    width: 180px;
+    height: 180px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+}
+#about .content .left .ref .circle{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f26541;
+    top: calc(100% - 80px);
+    text-align: center;
+}
+#about .content .left .ref .circle i{
+    height: 80px;
+    line-height: 80px;
+    font-size: 2.5em;
+    color: #fff;
+}
+#about .content .left .ref .title{
+    position: absolute;
+    font-size: 2.5em;
+    top: -65px;
+    left: 90px;
+    width: 200px;
+}
+#about .content .left .ref .description{
+    line-height: 1.5;
+    font-size: 14px;
+    left: 90px;
+    position: absolute;
+    width: 350px;
+    top: 20px;
+}
+#about .content .left .principles{
+    position: relative;
+    width: 110%;
+    height: calc(100% - 230px);
+    margin-top: 30px;
+    background-color: #ffeded;
+}
+#about .content .left .principles >div:first-of-type{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #286f6c;
+    left: calc(100% - 60px);
+    top: -60px;
+    text-align: center;
+    padding-top: 30px;
+}
+#about .content .left .principles >div:first-of-type i{
+    border-radius: 50%;
+    line-height: 62px;
+    font-size: 4em;
+    color: #fff;
+    height: 62px;
+}
+#about .content .left .principles >div:nth-of-type(2){
+    font-size: 1.8em;
+    padding: 20px 10px;
+}
+#about .content .left .principles >div:last-of-type{
+    width: 100%;
+    height: calc(100% - 75px);
+    display: flex;
+    justify-content: space-between;
+}
+#about .content .left .principles >div:last-of-type >div{
+    height: 100%;
+    width: 33%;
+    padding-left: 12px;
+}
+#about .content .left .principles >div:last-of-type >div div:first-of-type{
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+}
+#about .content .left .principles >div:last-of-type >div div:nth-of-type(2){
+    margin-bottom: 10px;
+}
+#about .content .left .principles >div:last-of-type >div div:nth-of-type(2) i{
+    position: relative;
+    transform: rotate(-45deg);
+}
+#about .content .left .principles >div:last-of-type >div div:last-of-type{
+    font-size: 12px;
+    line-height: 1.7;
+}
+#about .content .right{
+    width: 50%;
+    height: 100%;
+    padding-top: 40px;
+    position: relative;
+}
+#about .content .right > div{
+    position: absolute;
+}
+#about .content .right .img{
+    width: 380px;
+    height: 300px;
+    border-radius: 50%;
+    left: calc(100% - 284px);
+    top: 60px;
+}
+#about .content .right .img img{
+    width: 100%;
+    height: 100%;
+}
+#about .content .right .before{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #286f6c;
+    border-radius: 50%;
+    left: calc(100% - 250px);
+}
+#about .content .right .after{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #f26541;
+    border-radius: 50%;
+    top: 258px;
+    text-align: center;
+    line-height: 180px;
+    font-size: 1.8em;
+    left: calc(100% - 280px);
+}
+#about .content .right .after >div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 180px;
+}
+#about .content .right .after div div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #286f6c;
+    text-align: center;
+    line-height: 60px;
+    font-size: 10px;
+    animation-play-state: paused !important;
+    top: 0;
+    left: 0;
+
+}
+#about .content .right .after div div.active:first-of-type{
+    top: -30px;
+    left: -30px;
+}
+#about .content .right .after div div:first-of-type{
+    animation: html .3s linear .5s 1;
+}
+#about .content .right .after div div:first-of-type img{
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+
+}
+#about .content .right .after div div.active:nth-of-type(2){
+    top: 31px;
+    left: -66px;
+}
+#about .content .right .after div div:nth-of-type(2){
+    animation: css .6s linear .5s 1;
+}
+#about .content .right .after div div:nth-of-type(2) img{
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+}
+#about .content .right .after div div.active:nth-of-type(3){
+    top: 100px;
+    left: -63px;
+}
+#about .content .right .after div div:nth-of-type(3){
+    animation: js 0.9s linear .5s 1; 
+}
+#about .content .right .after div div:nth-of-type(3) img{
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+}
+#about .content .right .after div div.active:nth-of-type(4){
+    top: 160px;
+    left: -27px;
+}
+#about .content .right .after div div:nth-of-type(4){
+    animation: express 1.2s linear .5s 1;
+}
+#about .content .right .after div div:nth-of-type(4) img{
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+}
+#about .content .right .after div div.active:nth-of-type(5){
+    top: 187px;
+    left: 40px;
+}
+#about .content .right .after div div:nth-of-type(5){
+    animation: react 1.5s linear .5s 1;
+}
+#about .content .right .after div div:nth-of-type(5) img{
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+}
+#about .content .right .after div div.active:nth-of-type(6){
+    top: 182px;
+    left: 111px;
+}
+#about .content .right .after div div:nth-of-type(6){
+    animation: electron 1.8s linear .5s 1;
+}
+#about .content .right .after div div:nth-of-type(6) i{
+    height: 60px;
+    line-height: 60px;
+    font-size: 5em;
+    color: #fff;
+}
+#about .content .right .after div div.active:nth-of-type(7){
+    top: 135px;
+    left: 166px;
+}
+#about .content .right .after div div:nth-of-type(7){
+    animation: mysql 2.1s linear .5s 1;
+}
+#about .content .right .after div div:nth-of-type(7) i{
+    height: 60px;
+    line-height: 60px;
+    font-size: 5em;
+    color: #fff;
+}
+#about .content .right .after div div.active:last-of-type{
+    top: 70px;
+    left: 189px;
+}
+#about .content .right .after div div:last-of-type{
+    animation: mongodb 2.4s linear .5s 1;
+}
+#about .content .right .after div div:last-of-type i{
+    height: 60px;
+    line-height: 60px;
+    font-size: 4.8em;
+    color: #fff;
+}
+#about .content .right .after div div{
+}
+
+
+/********************************* animation *****************************/
+@keyframes html {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    100%{
+        top: -30px;
+        left: -30px;
+    }
+}
+@keyframes css {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: -30px;
+        left: -30px;
+    }
+    100%{
+        top: 31px;
+        left: -66px;
+    }
+}
+@keyframes js {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    35%{
+        top: -30px;
+        left: -30px;
+    }
+    70%{
+        top: 31px;
+        left: -66px;
+    }
+    100%{
+        top: 100px;
+        left: -63px;
+    }
+}
+@keyframes express {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: -30px;
+        left: -30px;
+    }
+    50%{
+        top: 31px;
+        left: -66px;
+    }
+    75%{
+        top: 100px;
+        left: -63px;
+    }
+    100%{
+        top: 160px;
+        left: -27px;
+    }
+}
+@keyframes react {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    20%{
+        top: -30px;
+        left: -30px;
+    }
+    40%{
+        top: 31px;
+        left: -66px;
+    }
+    60%{
+        top: 100px;
+        left: -63px;
+    }
+    80%{
+        top: 160px;
+        left: -27px;
+    }
+    100%{
+        top: 187px;
+        left: 40px;
+    }
+}
+@keyframes electron {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    17%{
+        top: -30px;
+        left: -30px;
+    }
+    34%{
+        top: 31px;
+        left: -66px;
+    }
+    51%{
+        top: 100px;
+        left: -63px;
+    }
+    68%{
+        top: 160px;
+        left: -27px;       
+    }
+    85%{
+        top: 187px;
+        left: 40px;        
+    }
+    100%{
+        top: 182px;
+        left: 111px;         
+    }
+}
+@keyframes mysql {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    14%{
+        top: -30px;
+        left: -30px;
+    }
+    28%{
+        top: 31px;
+        left: -66px;        
+    }
+    42%{
+        top: 100px;
+        left: -63px;
+    }
+    56%{
+        top: 160px;
+        left: -27px;
+    }
+    70%{
+        top: 187px;
+        left: 40px;
+    }
+    84%{
+        top: 182px;
+        left: 111px;
+    }
+    100%{
+        top: 135px;
+        left: 166px;
+    }
+}
+@keyframes mongodb {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    12%{
+        top: -30px;
+        left: -30px;
+    }
+    24%{
+        top: 31px;
+        left: -66px;        
+    }
+    36%{
+        top: 100px;
+        left: -63px;
+    }
+    48%{
+        top: 160px;
+        left: -27px;
+    }
+    60%{
+        top: 187px;
+        left: 40px;
+    }
+    72%{
+        top: 182px;
+        left: 111px;
+    }
+    84%{
+        top: 135px;
+        left: 166px;
+    }
+    100%{
+        top: 70px;
+        left: 189px;
+    }
+}
