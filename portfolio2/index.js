@@ -38,8 +38,8 @@ app.post('/myportfolio/contact', (req,res) => {
 });
 
 
+let port = process.env.PORT || 3000
 
-
-app.listen(3000, (err)=>{
+app.listen(port, (err)=>{
     console.log('done');
 });
